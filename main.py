@@ -12,6 +12,6 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
-    messages=[],
+messages=[{"role": "user","content":"プログラミングのやり方をおしえて"}],
 )
 print(response.choices[0]["message"]["content"].strip())
